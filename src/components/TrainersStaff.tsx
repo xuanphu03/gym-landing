@@ -48,16 +48,19 @@ export default function TrainersStaff() {
   const socials = [youtube, twitter, instagram]
 
   return (
-    <div className="mt-241">
-      <h2 className="text-5xl font-medium text-center">Trainers staff</h2>
-      <div className="flex flex-wrap justify-center 2xl:px-220 gap-20 mt-142">
+    <div className="mt-200">
+      <h2 className="sm:text-5xl font-medium text-center text-28">Trainers staff</h2>
+      <div className="2xl:grid-cols-4 2xl:gap-5 2xl:mx-180 lg:mt-120 lg:grid lg:grid-cols-3 lg:gap-58 lg:mx-7 sm:mt-100 sm:gap-9 mt-46 flex gap-3 overflow-x-auto snap-x">
         {staffs.map(staff => (
-          <div key={staff.image} className="px-18 py-5 bg-222 rounded-2xl flex flex-col items-center gap-5">
+          <div
+            key={staff.image}
+            className="flex flex-col gap-4.5 items-center pt-22 pb-29 bg-222 rounded-20 snap-center"
+          >
             <img src={staff.image} alt="Staff's Photo" />
-            <p>{staff.name}</p>
+            <p className="w-staff text-lg font-bold text-center">{staff.name}</p>
             <div className="flex gap-4">
               {socials.map(social => (
-                <div className="w-10 h-10 flex justify-center items-center border-2 rounded-full">
+                <div className="w-10 h-10 border-1 rounded-full flex justify-center items-center">
                   <img key={social} src={social} alt="social" />
                 </div>
               ))}

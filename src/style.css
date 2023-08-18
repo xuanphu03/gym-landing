@@ -18,6 +18,11 @@
   src: url('../src/assets/font/made_outer_sans/MADE Outer Sans Medium PERSONAL USE.otf') format('opentype');
 }
 
+@font-face {
+  font-family: MadeOuterBold;
+  src: url('../src/assets/font/made_outer_sans/MADE Outer Sans Bold PERSONAL USE.otf') format('opentype');
+}
+
 .trainer-image::after {
   content: '';
   position: absolute;
@@ -26,7 +31,8 @@
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 40%),
-    linear-gradient(-90deg, black 0%, rgba(0, 0, 0, 0) 40%), linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 50%),
+  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 20%),
+    linear-gradient(-90deg, black 0%, rgba(0, 0, 0, 0) 40%), 
+    linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0) 20%),
     linear-gradient(180deg, black 0%, rgba(0, 0, 0, 0) 20%);
 }

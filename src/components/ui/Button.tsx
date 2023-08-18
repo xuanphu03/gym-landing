@@ -7,7 +7,10 @@ type ButtonProps = PropsWithChildren<{
 
 export default function Button({ children, className }: ButtonProps) {
   return (
-    <button type="button" className={twMerge('text-black bg-primary px-13 py-4 rounded-full', className)}>
+    <button
+      type="button"
+      className={twMerge('mb-[38px] mx-84 text-black bg-primary py-1.5 rounded-full text-sm', className)}
+    >
       {children}
     </button>
   )

@@ -26,16 +26,19 @@ export default function ReasonToJoin() {
       desc: 'The gym is open 24 hours a day, also works on all holidays and weekends'
     }
   ]
+
   return (
-    <div className="mt-420 2xl:px-220 lg:px-8 px-20">
-      <h2 className="text-5xl font-medium 2xl:text-left text-center">Reasons to join</h2>
-      <ul className="mt-120 grid lg:grid-cols-2 lg:gap-y-20 lg:gap-x-30 gap-15">
+    <div className="lg:mt-420 sm:mt-228 mt-200">
+      <h2 className="2xl:pl-220 2xl:text-left sm:text-5xl font-medium text-28 text-center">Reasons to join</h2>
+      <ul className="2xl:px-220 lg:grid lg:grid-cols-2 lg:px-7 lg:mt-120 sm:mt-100 sm:px-20 mt-70 px-37">
         {reasons.map(reason => (
-          <li key={reason.title} className="flex gap-2">
-            <img src={reason.icon} alt="" />
-            <div>
-              <h3 className="mb-3">{reason.title}</h3>
-              <p>{reason.desc}</p>
+          <li key={reason.title} className="mt-10 flex">
+            <div className="w-20 h-20 flex justify-center items-start">
+              <img className="pt-2" src={reason.icon} alt="icon" />
+            </div>
+            <div className="w-2/3 ml-5">
+              <h3 className="text-lg font-bold">{reason.title}</h3>
+              <p className="sm:mt-3 mt-3.5 text-sm font-light">{reason.desc}</p>
             </div>
           </li>
         ))}

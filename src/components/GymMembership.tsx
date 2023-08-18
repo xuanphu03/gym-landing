@@ -55,25 +55,30 @@ const memberships = [
 
 export default function Membership() {
   return (
-    <div className="mt-250">
-      <h2 className="text-5xl text-center font-medium">Gym membership</h2>
-      <div className="mt-120 2xl:px-320 flex flex-wrap justify-center gap-68">
+    <div className="sm:flex sm:flex-col sm:items-center sm:mt-180 mt-200">
+      <h2 className="sm:text-5xl font-medium text-center text-28">Gym membership</h2>
+      <div className="2xl:mx-320 2xl:gap-68 lg:grid-cols-3 lg:mx-30 lg:mt-120 lg:gap-14 sm:mt-100 sm:grid sm:grid-cols-2 sm:mx-16 sm:gap-34 mt-70 flex gap-3 overflow-x-auto snap-x">
         {memberships.map(membership => (
-          <div key={membership.title} className="w-[280px] bg-neutral-800 rounded-[10px] flex items-center flex-col">
-            <div className="w-full text-xl text-center font-medium py-5 border-b border-black">
-              <p>{membership.title}</p>
-              <p>{membership.price}</p>
+          <div
+            key={membership.title}
+            className="hover:bg-primary hover:text-black snap-center w-pass bg-222 rounded-xl"
+          >
+            <div className="py-22 text-center border-b-2 border-black">
+              <p className="text-lg font-bold">{membership.title}</p>
+              <p className="text-2xl font-medium">{membership.price}</p>
             </div>
-            <div className="flex flex-col justify-between h-full items-center">
-              <div className="px-6 mt-7 h-41 flex flex-col gap-4 justify-between">
+
+            <div className="text-white bg-222 flex flex-col">
+              <div className="w-60 h-220 mt-27 mr-12 ml-23">
                 {membership.benefits.map(benefit => (
-                  <p key={benefit} className="flex gap-3">
-                    <img src={check} alt="" />
+                  <p key={benefit} className="mb-4 text-sm font-light flex gap-3">
+                    <img src={check} alt="check" />
                     <span>{benefit}</span>
                   </p>
                 ))}
               </div>
-              <Button className="my-10 w-2/3">Buy</Button>
+
+              <Button>Buy</Button>
             </div>
           </div>
         ))}

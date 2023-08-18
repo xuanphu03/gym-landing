@@ -1,7 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import Home from './components/Home'
-import Banner from './components/Banner'
+import Header from './components/Header'
 import ReasonToJoin from './components/ReasonToJoin'
 import GymMembership from './components/GymMembership'
 import AboutUs from './components/AboutUs'
@@ -12,8 +11,7 @@ import './style.css'
 function App() {
   return (
     <div>
-      <Home />
-      <Banner />
+      <Header />
       <ReasonToJoin />
       <GymMembership />
       <AboutUs />
