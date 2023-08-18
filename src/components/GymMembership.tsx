@@ -61,7 +61,7 @@ export default function Membership() {
         {memberships.map(membership => (
           <div
             key={membership.title}
-            className="hover:bg-primary hover:text-black snap-center w-pass bg-222 rounded-xl"
+            className="sm:hover:bg-primary sm:hover:text-black snap-center w-pass bg-222 rounded-xl"
           >
             <div className="py-22 text-center border-b-2 border-black">
               <p className="text-lg font-bold">{membership.title}</p>
