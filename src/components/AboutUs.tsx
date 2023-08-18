@@ -24,27 +24,6 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
-
-      {/* <div className="lg:hidden sm:mt-20 mt-15">
-        <div className="flex gap-3 overflow-x-auto snap-x">
-          <img className="sm:w-570 w-room rounded-xl snap-center" src={room} alt="Room gym" />
-          <img className="sm:w-570 w-room rounded-xl snap-center" src={room2} alt="Room gym" />
-          <img className="sm:w-570 w-room rounded-xl snap-center" src={room1} alt="Room gym" />
-        </div>
-        <div className="hidden lg:flex justify-between items-center mt-2">
-          <div className="w-200 h-0.5 flex gap-1">
-            <div className="w-10 h-0.5 bg-yellow-400 rounded-[10px]"></div>
-            <div className="w-10 h-0.5 bg-white rounded-[10px]"></div>
-            <div className="w-10 h-0.5 bg-white rounded-[10px]"></div>
-            <div className="w-10 h-0.5 bg-white rounded-[10px]"></div>
-          </div>
-
-          <div className="flex gap-3">
-            <img src={left} alt="left" />
-            <img src={right} alt="right" />
-          </div>
-        </div>
-      </div> */}
       <Slider images={[room, room1, room2]} className="sm:mt-20 mt-15" />
     </div>
   )
