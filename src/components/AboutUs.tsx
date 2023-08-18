@@ -1,8 +1,6 @@
 import room from '../assets/images/gym-room.png'
 import room1 from '../assets/images/gym-room-1.png'
 import room2 from '../assets/images/gym-room-2.jpg'
-import left from '../assets/svgs/turn-left.svg'
-import right from '../assets/svgs/turn-right.svg'
 import Slider from './ui/Slider'
 
 export default function AboutUs() {
