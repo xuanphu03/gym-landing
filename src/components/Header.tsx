@@ -14,22 +14,23 @@ export default function Home() {
   return (
     <div className="sm:pt-10 pt-60 relative">
       <nav className="2xl:px-220 lg:px-7 sm:px-5 px-50 flex justify-between">
-        <p className="font-logo text-2xl">
-          <a href="#">GYM</a>
-          <span className="text-primary">24</span>
+        <p className="animate-jump-in font-logo text-2xl">
+          <a href="#">
+            GYM<span className="text-primary">24</span>
+          </a>
         </p>
 
-        <ul className="sm:flex sm:gap-75 sm:items-center text-xs font-light hidden">
-          <li>
+        <ul className="animate-flip-down sm:flex sm:gap-75 sm:items-center text-xs font-light hidden">
+          <li className="hover:text-primary">
             <a href="#">Advantages</a>
           </li>
-          <li>
+          <li className="hover:text-primary">
             <a href="#">Membership</a>
           </li>
-          <li>
+          <li className="hover:text-primary">
             <a href="#">About</a>
           </li>
-          <li>
+          <li className="hover:text-primary">
             <a href="#">Trainers</a>
           </li>
         </ul>

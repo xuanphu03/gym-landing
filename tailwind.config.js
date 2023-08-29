@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         primary: '#FAFF00',
-        222: '#222'
+        hover: '#FDFF8C',
+        222: '#222',
+        txtHover: '#111111'
       },
       margin: {
         15: '3.75rem',
@@ -102,5 +104,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animated')]
 }

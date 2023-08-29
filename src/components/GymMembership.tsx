@@ -1,3 +1,4 @@
+import { useInView } from 'react-intersection-observer'
 import check from '../assets/svgs/check.svg'
 import Button from './ui/Button'
 
@@ -54,35 +55,41 @@ const memberships = [
 ]
 
 export default function Membership() {
-  return (
-    <div className="sm:flex sm:flex-col sm:items-center sm:mt-180 mt-200">
-      <h2 className="sm:text-5xl font-medium text-center text-28">Gym membership</h2>
-      <div className="2xl:mx-320 2xl:gap-68 lg:grid-cols-3 lg:mx-30 lg:mt-120 lg:gap-14 sm:mt-100 sm:grid sm:grid-cols-2 sm:mx-16 sm:gap-34 mt-70 flex gap-3 overflow-x-auto snap-x">
-        {memberships.map(membership => (
-          <div
-            key={membership.title}
-            className="sm:hover:bg-primary sm:hover:text-black snap-center w-pass bg-222 rounded-xl"
-          >
-            <div className="py-22 text-center border-b-2 border-black">
-              <p className="text-lg font-bold">{membership.title}</p>
-              <p className="text-2xl font-medium">{membership.price}</p>
-            </div>
+  const { ref, inView } = useInView({
+    triggerOnce: true
+  })
 
-            <div className="text-white bg-222 flex flex-col">
-              <div className="w-60 h-220 mt-27 mr-12 ml-23">
-                {membership.benefits.map(benefit => (
-                  <p key={benefit} className="mb-4 text-sm font-light flex gap-3">
-                    <img src={check} alt="check" />
-                    <span>{benefit}</span>
-                  </p>
-                ))}
+  return (
+    <div className="sm:flex sm:flex-col sm:items-center sm:mt-180 mt-200" ref={ref}>
+      {inView && <h2 className="animate-fade-down sm:text-5xl font-medium text-center text-28">Gym membership</h2>}
+      {inView && (
+        <div className="2xl:mx-320 2xl:gap-68 lg:grid-cols-3 lg:mx-30 lg:mt-120 lg:gap-14 sm:mt-100 sm:grid sm:grid-cols-2 sm:mx-16 sm:gap-34 mt-70 flex gap-3 overflow-x-auto snap-x">
+          {memberships.map(membership => (
+            <div
+              key={membership.title}
+              className="cursor-default sm:animate-flip-down sm:hover:bg-primary sm:hover:text-black snap-center w-pass bg-222 rounded-xl"
+            >
+              <div className="py-22 text-center border-b-2 border-black">
+                <p className="text-lg font-bold">{membership.title}</p>
+                <p className="text-2xl font-medium">{membership.price}</p>
               </div>
 
-              <Button>Buy</Button>
+              <div className="text-white bg-222 flex flex-col">
+                <div className="w-60 h-220 mt-27 mr-12 ml-23">
+                  {membership.benefits.map(benefit => (
+                    <p key={benefit} className="mb-4 text-sm font-light flex gap-3">
+                      <img src={check} alt="check" />
+                      <span>{benefit}</span>
+                    </p>
+                  ))}
+                </div>
+
+                <Button className="sm:hover:bg-hover sm:hover:text-txtHover">Buy</Button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
